@@ -208,7 +208,7 @@ angular.module('page', ["ideUI", "ideView", "entityApi"])
 			$scope.optionsCustomerPayment = response.data.map(e => {
 				return {
 					value: e.Id,
-					text: e.Title
+					text: e.Name
 				}
 			});
 		});

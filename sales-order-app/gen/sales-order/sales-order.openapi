@@ -1468,7 +1468,7 @@ paths:
                     notEquals:
                       Id: 33
                     contains:
-                      Title: "abcd"
+                      Name: "abcd"
                     greaterThan:
                       Id: 0
                     lessThanOrEqual:
@@ -1490,7 +1490,7 @@ paths:
                 value:
                   $filter:
                     contains:
-                      Title: "abcd"
+                      Name: "abcd"
               countWithGreaterThan:
                 summary: Count with Greater Than
                 value:
@@ -1554,7 +1554,7 @@ paths:
                     notEquals:
                       Id: 33
                     contains:
-                      Title: "abcd"
+                      Name: "abcd"
                     greaterThan:
                       Id: 0
                     lessThanOrEqual:
@@ -1576,7 +1576,7 @@ paths:
                 value:
                   $filter:
                     contains:
-                      Title: "abcd"
+                      Name: "abcd"
               searchWithGreaterThan:
                 summary: Search with Greater Than
                 value:
@@ -4107,7 +4107,7 @@ components:
         Id:
           type: integer
           format: int32
-        Title:
+        Name:
           type: string
           minLength: 0
           maxLength: 100
@@ -4134,7 +4134,7 @@ components:
                       items:
                         type: integer
                         format: int32
-                Title:
+                Name:
                   oneOf:
                     - type: string
                       minLength: 0
@@ -4172,7 +4172,7 @@ components:
                       items:
                         type: integer
                         format: int32
-                Title:
+                Name:
                   oneOf:
                     - type: string
                       minLength: 0
@@ -4203,7 +4203,7 @@ components:
               type: object
               properties:
                 Id:
-                Title:
+                Name:
                   type: string
                   minLength: 0
                   maxLength: 100
@@ -4215,7 +4215,7 @@ components:
                 Id:
                   type: integer
                   format: int32
-                Title:
+                Name:
                   type: string
                   minLength: 0
                   maxLength: 100
@@ -4231,7 +4231,7 @@ components:
                 Id:
                   type: integer
                   format: int32
-                Title:
+                Name:
                   type: string
                   minLength: 0
                   maxLength: 100
@@ -4247,7 +4247,7 @@ components:
                 Id:
                   type: integer
                   format: int32
-                Title:
+                Name:
                   type: string
                   minLength: 0
                   maxLength: 100
@@ -4263,7 +4263,7 @@ components:
                 Id:
                   type: integer
                   format: int32
-                Title:
+                Name:
                   type: string
                   minLength: 0
                   maxLength: 100
@@ -4275,12 +4275,12 @@ components:
                   format: double
         $select:
           type: array
-          example: ["Id", "Title", "Customer", "Amount"]
+          example: ["Id", "Name", "Customer", "Amount"]
           items:
             type: string
         $sort:
           - type: string
-            example: "Id,Title,Customer,Amount"
+            example: "Id,Name,Customer,Amount"
         $order:
           type: string
           enum: ["asc", "desc"]

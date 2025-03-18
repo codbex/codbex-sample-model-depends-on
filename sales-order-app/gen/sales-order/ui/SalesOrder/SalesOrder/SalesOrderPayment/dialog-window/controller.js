@@ -105,7 +105,7 @@ angular.module('page', ["ideUI", "ideView", "entityApi"])
 						$scope.optionsCustomerPayment = response.data.map(e => {
 							return {
 								value: e.Id,
-								text: e.Title
+								text: e.Name
 							}
 						});
 						if ($scope.action !== 'select' && newValue !== oldValue) {
@@ -116,6 +116,15 @@ angular.module('page', ["ideUI", "ideView", "entityApi"])
 							}
 						}
 					});
+				});
+			}
+		});
+
+		$scope.$watch('entity.CustomerPayment', function (newValue, oldValue) {
+			if (newValue !== undefined && newValue !== null) {
+				entityApi.$http.get($scope.serviceCustomerPayment + '/' + newValue).then(function (response) {
+					let valueFrom = response.data.Amount;
+					$scope.entity.Amount = valueFrom;
 				});
 			}
 		});

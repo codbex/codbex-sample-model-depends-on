@@ -94,7 +94,7 @@
                         "type": "VARCHAR",
                         "length": 100,
                         "nullable": true,
-                        "name": "CUSTOMERPAYMENT_TITLE"
+                        "name": "CUSTOMERPAYMENT_NAME"
                     },
                     {
                         "type": "INTEGER",

@@ -130,8 +130,8 @@ class CustomerPaymentService {
     }
 
     private validateEntity(entity: any): void {
-        if (entity.Title?.length > 100) {
-            throw new ValidationError(`The 'Title' exceeds the maximum length of [100] characters`);
+        if (entity.Name?.length > 100) {
+            throw new ValidationError(`The 'Name' exceeds the maximum length of [100] characters`);
         }
         for (const next of validationModules) {
             next.validate(entity);

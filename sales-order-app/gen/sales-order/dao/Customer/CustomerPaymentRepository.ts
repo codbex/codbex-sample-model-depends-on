@@ -5,13 +5,13 @@ import { dao as daoApi } from "sdk/db";
 
 export interface CustomerPaymentEntity {
     readonly Id: number;
-    Title?: string;
+    Name?: string;
     Customer?: number;
     Amount?: number;
 }
 
 export interface CustomerPaymentCreateEntity {
-    readonly Title?: string;
+    readonly Name?: string;
     readonly Customer?: number;
     readonly Amount?: number;
 }
@@ -24,43 +24,43 @@ export interface CustomerPaymentEntityOptions {
     $filter?: {
         equals?: {
             Id?: number | number[];
-            Title?: string | string[];
+            Name?: string | string[];
             Customer?: number | number[];
             Amount?: number | number[];
         };
         notEquals?: {
             Id?: number | number[];
-            Title?: string | string[];
+            Name?: string | string[];
             Customer?: number | number[];
             Amount?: number | number[];
         };
         contains?: {
             Id?: number;
-            Title?: string;
+            Name?: string;
             Customer?: number;
             Amount?: number;
         };
         greaterThan?: {
             Id?: number;
-            Title?: string;
+            Name?: string;
             Customer?: number;
             Amount?: number;
         };
         greaterThanOrEqual?: {
             Id?: number;
-            Title?: string;
+            Name?: string;
             Customer?: number;
             Amount?: number;
         };
         lessThan?: {
             Id?: number;
-            Title?: string;
+            Name?: string;
             Customer?: number;
             Amount?: number;
         };
         lessThanOrEqual?: {
             Id?: number;
-            Title?: string;
+            Name?: string;
             Customer?: number;
             Amount?: number;
         };
@@ -100,8 +100,8 @@ export class CustomerPaymentRepository {
                 autoIncrement: true,
             },
             {
-                name: "Title",
-                column: "CUSTOMERPAYMENT_TITLE",
+                name: "Name",
+                column: "CUSTOMERPAYMENT_NAME",
                 type: "VARCHAR",
             },
             {
